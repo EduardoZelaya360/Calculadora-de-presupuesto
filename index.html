@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Transacciones</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-dark mb-4 shadow-sm" style="background: linear-gradient(90deg, #0d47a1, #1976d2);">
+     <div class="container">
+        <span class="navbar-brand mb-0 h1 fw-bold">Control Financiero</span>
+     </div>
+    </nav>
+
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <div class="card-body p-4">
+                        <h2 class="fs-4 fw-bold mb-4 text-secondary">
+                            Nueva transacción
+                        </h2>
+
+                        <div class="d-flex gap-2 mb-3" role="group">
+                            <button type="button" class="btn btn-success w-50 fw-bold" id="btn-ing"
+                                onclick="setType('ingreso')">
+                                ↑ Ingreso
+                            </button>
+                            <button type="button" class="btn btn-outline-danger w-50 fw-bold" id="btn-gas"
+                                onclick="setType('gasto')">
+                                ↓ Gasto
+                            </button>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-muted">Descripción</label>
+                            <input type="text" class="form-control" id="f-desc" placeholder="Ej: Salario mensual"
+                                maxlength="60" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-muted">Monto (L)</label>
+                            <div class="input-group">
+                                <span class="input-group-text fw-bold bg-light text-secondary">L</span>
+                                <input type="number" class="form-control" id="f-amount" placeholder="0.00" min="0"
+                                    step="0.01" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-muted">Categoría</label>
+                            <select class="form-select" id="f-cat"></select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-muted">Fecha</label>
+                            <input type="date" class="form-control" id="f-date" />
+                        </div>
+
+                        <button class="btn btn-primary w-100 py-2 fw-bold" onclick="addTx()">
+                            Agregar transacción
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-8">
+                <div class="card shadow-sm border-0 rounded-3 h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <h2 class="fs-4 fw-bold mb-4 text-secondary">Resumen Visual</h2>
+
+                        <div class="bg-light border rounded-3 d-flex flex-column align-items-center justify-content-center flex-grow-1 p-4 text-center"
+                            style="min-height: 350px">
+                            <h1 class="display-6 fw-bold text-secondary mb-3">
+                                Contenedor de gráficos
+                            </h1>
+                            <p class="text-muted mb-4">
+                                Aquí podrás incrustar tu librería de gráficos para ver el
+                                balance de ingresos y gastos.
+                            </p>
+                            <button class="btn btn-outline-secondary px-4 py-2 fw-semibold" type="button">
+                                Actualizar datos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
