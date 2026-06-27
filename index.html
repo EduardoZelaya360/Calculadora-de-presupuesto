@@ -16,7 +16,7 @@
      </div>
     </nav>
 
-    <div class="container">
+    <div class="container2">
         <div class="row g-4">
             <div class="col-12 col-lg-4">
                 <div class="card shadow-sm border-0 rounded-3">
@@ -53,7 +53,29 @@
 
                         <div class="mb-3">
                             <label class="form-label fw-semibold text-muted">Categoría</label>
-                            <select class="form-select" id="f-cat"></select>
+                            <select class="form-select" id="f-cat">
+                                <option value="" selected disabled>Selecciona una categoría...</option>
+                                
+                                <optgroup label="Ingresos">
+                                    <option value="salario">Salario / Sueldo</option>
+                                    <option value="freelance">Trabajo Freelance</option>
+                                    <option value="inversiones">Inversiones</option>
+                                </optgroup>
+                                
+                                <optgroup label="Gastos Fijos">
+                                    <option value="alquiler">Alquiler / Hipoteca</option>
+                                    <option value="servicios">Servicios (Agua, Luz, Internet)</option>
+                                    <option value="transporte">Transporte / Combustible</option>
+                                </optgroup>
+                                
+                                <optgroup label="Gastos Variables & Ocio">
+                                    <option value="comida_rapida">Comida Rápida</option>
+                                    <option value="compras_online">Compras Online (Temu, etc.)</option>
+                                    <option value="suscripciones">Suscripciones (Spotify, Claude, etc.)</option>
+                                    <option value="videojuegos">Videojuegos</option>
+                                    <option value="salud">Salud y Farmacia</option>
+                                </optgroup>
+                            </select>
                         </div>
 
                         <div class="mb-4">
@@ -91,7 +113,18 @@
             </div>
         </div>
     </div>
+
+    <footer class="text-center text-lg-start">
+        <div class="text-center text-white p-3" style="background: linear-gradient(90deg, #0d47a1, #1976d2);">
+        © 2026 Evon Zelaya & Allison Aguilera.
+       
+        </div>
+    </footer>
+
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/chart.js/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
